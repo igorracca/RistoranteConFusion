@@ -11,4 +11,13 @@ export class DishService {
     return DISHES;
   }
 
+  getDish(id: number): Dish {
+    // the filter returns an array, that is why [0] is used
+    return DISHES.filter((dish) => (dish.id == id))[0];
+  }
+
+  getFeaturedDish(): Dish {
+    return DISHES.filter((dish) => (dish.featured))[0];
+  }
+
 }
